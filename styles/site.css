@@ -1,0 +1,402 @@
+/* -------- CSS theme variables ------- */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+:root {
+  --primary: #c1d72e; /* light green */
+  --secondary: #49b8cd; /* light blue */
+  --accent: #87468b; /* purple */
+  --base: #58595b; /* gray (text) */
+}
+
+/* -------- Global styles ------- */
+
+.hidden {
+  display: none !important;
+}
+
+a:hover {
+  color: #c1d72e;
+}
+
+button.spanish {
+  font-weight: bold;
+  color: white;
+  padding: 7px;
+  background-color: #c1d72e;
+  border-width: 0px;
+  border-radius: 5px;
+}
+
+button.english {
+  font-weight: bold;
+  color: white;
+  padding: 7px;
+  background-color: #c1d72e;
+  border-width: 0px;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0; /* removes default margin */
+}
+
+/* an example for using the secondary color for all h2 tags */
+
+h2 {
+  color: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  color: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: var(--base);
+}
+
+a {
+  color: var(--base);
+}
+
+main {
+  padding: 2em;
+  background-color: rgb(255, 255, 255);
+}
+
+.smallmargin {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.moremargin {
+  margin-top:40px;
+}
+
+/* -------- nav bar styles ------- */
+
+.nav-hidden {
+  display: none !important;
+}
+
+header {
+  margin: 0;
+  padding: 1em;
+  padding-bottom: 0.25em;
+  color: var(--base);
+  background-color: hsl(0, 0%, 95%);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: smaller;
+
+}
+
+#logo-sources {
+  margin: 1em;
+  font-size: 0.6rem;
+}
+
+header figure {
+  margin: 0; /* remove default margin */
+}
+
+#header-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#cornell-logo {
+  width: 4em;
+}
+
+#eia-logo {
+  width: 11em;
+  margin-left: 0.7em;
+}
+
+#navburger-btn {
+  color: var(--base);
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navburger-btn svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+nav a {
+  text-decoration-line: none;
+  font-family: sans-serif;
+  padding: 0.6em;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+
+  .nav-hidden {
+    display: flex !important;
+  }
+
+  #navburger-btn {
+    display: none;
+  }
+  #nav-menu {
+    max-width: 50%;
+    flex-direction: row;
+  }
+  nav a {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+
+}
+
+@media (max-width: 600px) {
+  div.center h1{
+    font-size: 25px;
+  }
+  div.center h3{
+    font-size: 15px;
+  }
+}
+
+/* -------- index.html styles ------- */
+
+div.background img {
+  width: 100%;
+  height: 100%;
+}
+
+div.background figure {
+  margin: 0px;
+}
+
+.background {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.center {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+
+
+div.center h1{
+  color: white;
+}
+
+div.center h3 {
+  color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* -------- contact.html styles ------- */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.profile figure {
+  margin: 0 auto;
+}
+
+.profile img {
+  display: block;
+  border-radius: 250px;
+  max-width: 20em;
+  max-height: 20em;
+}
+
+.profile p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 600px) {
+  .profile {
+    flex-direction: row;
+  }
+  .profile figure {
+    margin: 0 0;
+  }
+  .profile div {
+    margin-left: 3em;
+  }
+}
+
+/* -------- about.html styles ------- */
+
+div.imgcarousel {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto 10px auto;
+}
+
+figure.slide img {
+  display: block;
+}
+
+div.imgcarousel button {
+  background-color: transparent;
+  border: transparent;
+
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+div.dots button {
+  background-color: transparent;
+  border: transparent;
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: #767676;
+}
+
+div.dots button.current {
+  color: #000000;
+}
+
+div.dots button:hover {
+  cursor:pointer;
+  font-size: 65px;
+  margin: 0px;
+  margin-top: -15px;
+}
+
+.imgcarousel figure img {
+  width: 40%;
+  margin: 10px auto 10px auto;
+}
+
+.dots {
+  max-width: 390px;
+  margin: 10px auto 10px auto;
+}
+
+.arrow button {
+  height: 75%;
+  margin: auto 10px auto 10px;
+}
+
+.arrow button img {
+  width: 2.5em;
+  height: auto; /* maintain aspect ratio */
+}
+
+.slide {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+@media (min-width: 600px) {
+  .arrow button img {
+    width: initial;
+  }
+  /* increase margin around slide text */
+  .slide {
+    margin-left: 3em; 
+    margin-right: 3em;
+  }
+}
+
+.samplesched h2 {
+  text-align: center;
+}
+
+.samplesched figure {
+  width: 80%;
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.abtlogo img{
+  width: 33%;
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+.cntrtext {
+  text-align: center;
+  font-size: 36px;
+  color: #c1d72e;
+  padding-top: 50px;
+}
+
+.logocite {
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+.slide {
+  display: flex;
+  flex-direction: row;
+}
+
+.slideimg img {
+  min-width: 90%;
+  padding-right: 200px;
+}
+
+.slidetxt {
+  max-width: 66%;
+}
+
+}
+
+/* -------- tutor.html styles ------- */
+
+ul li {
+  color: #58595b;
+}
+
+@media (min-width: 600px) {
+.tutorflex {
+  display: flex;
+}
+
+.tutorflex section {
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+}
